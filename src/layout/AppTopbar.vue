@@ -2,8 +2,10 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router';
 import { defineEmits } from 'vue'
+import TopbarMenu from './TopbarMenu.vue';
 
 const emit = defineEmits(['toggle-sidebar'])
+const profileOpen = ref(false)
 
 const toggleSidebar = () => {
     emit('toggle-sidebar')
@@ -41,24 +43,7 @@ const toggleSidebar = () => {
         </div>
 
         <!-- Right Section -->
-        <div class="flex items-center gap-4">
-            <!-- Config buttons -->
-            <!-- Uncomment these as needed -->
-
-            <div class="lg:flex items-center gap-4">
-                <button type="button" class="layout-topbar-action text-lg hover:text-pink-500 transition">
-                    <i class="pi pi-calendar"></i>
-                    <!-- <span class="ml-2">Calendar</span> -->
-                </button>
-                <button type="button" class="layout-topbar-action text-lg hover:text-pink-500 transition">
-                    <i class="pi pi-inbox"></i>
-                    <!-- <span class="ml-2">Messages</span> -->
-                </button>
-                <button type="button" class="layout-topbar-action text-lg hover:text-pink-500 transition">
-                    <i class="pi pi-user"></i>
-                    <!-- <span class="ml-2">Profile</span> -->
-                </button>
-            </div>
-        </div>
+        <TopbarMenu />
+        
     </div>
 </template>
