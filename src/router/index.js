@@ -1,18 +1,24 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../view/HomeView.vue'
+import Dashboard from '../view/Dashboard.vue'
+import CctvForm from '../view/pages/CctvForm.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: Dashboard
+  },
+  {
+    path: '/cform',
+    name: 'form',
+    // Route level code-splitting
+    // This generates a separate chunk (About.[hash].js) for this route
+    component: () => import('../view/pages/CctvForm.vue')
   },
   {
     path: '/about',
     name: 'about',
-    // Route level code-splitting
-    // This generates a separate chunk (About.[hash].js) for this route
     component: () => import('../view/AboutView.vue')
   }
 ]

@@ -13,18 +13,18 @@
         <app-topbar @toggle-sidebar="toggleSidebar"></app-topbar>
 
         <div
-        class="grid flex-1 overflow-hidden p-5 transition-all duration-300"
+        class="grid flex-1 overflow-hidden p-3.5 transition-all duration-300 space-x-3"
         :style="{
           gridTemplateColumns: sidebarOpen ? '16rem 1fr' : '0rem 1fr'
         }"
       >
         <!-- Sidebar -->
-        <div class="bg-white overflow-hidden transition-all duration-300">
+        <div class="overflow-hidden transition-all duration-300 rounded-xl shadow">
           <app-sidebar />
         </div>
 
         <!-- Main content -->
-        <div class="overflow-y-auto p-5 transition-all duration-300 text-black border-4 border-red-500">
+        <div class="overflow-y-auto transition-all duration-300 text-black ">
           <router-view />
         </div>
       </div>

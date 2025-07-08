@@ -19,7 +19,7 @@ const profileOpen = ref(false)
             <div class="relative">
             <button 
                 type="button" 
-                class="layout-topbar-action text-lg hover:text-pink-500 transition"
+                class="cursor-pointer layout-topbar-action text-lg hover:text-pink-500 transition"
                 @mouseenter="calendarOpen = true" 
                 @mouseleave="calendarOpen = false"
             >
@@ -49,7 +49,7 @@ const profileOpen = ref(false)
             <div class="relative">
             <button 
                 type="button" 
-                class="layout-topbar-action text-lg hover:text-pink-500 transition"
+                class="cursor-pointer layout-topbar-action text-lg hover:text-pink-500 transition"
                 @mouseenter="inboxOpen = true" 
                 @mouseleave="inboxOpen = false"
             >
@@ -79,7 +79,7 @@ const profileOpen = ref(false)
             <div class="relative">
             <button 
                 type="button" 
-                class="layout-topbar-action text-lg hover:text-pink-500 transition"
+                class="cursor-pointer layout-topbar-action text-lg hover:text-pink-500 transition"
                 @mouseenter="profileOpen = true" 
                 @mouseleave="profileOpen = false"
             >
@@ -102,13 +102,13 @@ const profileOpen = ref(false)
                 >
                 <div class="mb-3">
                     <p class="text-gray-800 text-md font-semibold">Ashley San Pedro</p>
-                    <p class="text-gray-500 text-sm">Software Engineer</p>
+                    <p class="text-gray-500 text-sm">IT Systems Engineer</p>
                 </div>
 
-                <div class="space-y-2">
-                    <button class="w-full text-left text-gray-700 hover:text-pink-500 transition">About Me</button>
-                    <button class="w-full text-left text-gray-700 hover:text-pink-500 transition">Settings</button>
-                    <button class="w-full text-left text-red-500 hover:text-red-600 transition">Logout</button>
+                <div class="">
+                    <button class="w-full cursor-pointer text-sm text-left text-gray-700 py-1 px-2 rounded-md hover:bg-gray-100 transition">About Me</button>
+                    <button class="w-full cursor-pointer text-sm text-left text-gray-700 py-1 px-2 rounded-md hover:bg-gray-100 transition">Settings</button>
+                    <button class="w-full cursor-pointer text-sm text-left text-red-500 py-1 px-2 rounded-md hover:bg-red-100 transition">Logout</button>
                 </div>
                 </div>
             </Transition>

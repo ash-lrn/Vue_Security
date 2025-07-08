@@ -4,6 +4,8 @@ import App from './App.vue'
 import PrimeVue from 'primevue/config';
 import router from './router/index';
 import Aura from '@primeuix/themes/aura'
+import { MotionPlugin } from '@vueuse/motion'
+
 
 import 'primeicons/primeicons.css'
 
@@ -19,6 +21,7 @@ import Toast from 'primevue/toast'
 import ConfirmDialog from 'primevue/confirmdialog'
 import Textarea from 'primevue/textarea';
 import Select from 'primevue/select';
+import DatePicker from 'primevue/datepicker';
 
 
 import ConfirmationService from 'primevue/confirmationservice';
@@ -28,6 +31,7 @@ import ToastService from 'primevue/toastservice';
 
 const app = createApp(App)
 app.use(router);
+
 app.use(PrimeVue, {
     theme: {
         preset: Aura,
@@ -44,10 +48,12 @@ app.component('Row', Row)
 app.component('Dialog', Dialog)
 app.component('InputText', InputText)
 app.component('Fluid', Fluid)
+app.component('DatePicker', DatePicker)
 app.component('Textarea', Textarea)
 app.component('Select', Select)
 app.component('Toast', Toast)
 app.component('ConfirmDialog', ConfirmDialog)
+
 
 app.use(ToastService);
 app.use(ConfirmationService);

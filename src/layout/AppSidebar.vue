@@ -13,32 +13,29 @@ const toggleDropdown = (name) => {
 </script>
 
 <template>
-  <aside class="h-full w-64 bg-white border-r border-gray-200 p-5 overflow-y-auto shadow-sm">
+  <aside class="h-full w-64 bg-white p-5 rounded-xl overflow-y-auto shadow">
     <!-- Home Section -->
     <div>
       <h2 class="text-xs font-bold text-gray-400 uppercase mb-4">Home</h2>
       <SidebarItem link="/" icon="pi pi-home" label="Dashboard"/>
     </div>
 
-    <!-- UI Components Section -->
     <div class="mt-6">
-      <h2 class="text-xs font-bold text-gray-400 uppercase mb-4">UI Components</h2>
+      <h2 class="text-xs font-bold text-gray-400 uppercase mb-4">CCTV</h2>
       <div class="space-y-1">
-        <SidebarItem link="/about" icon="pi pi-image" label="Form Layout" />
-        <SidebarItem link="/input" icon="pi pi-check-square" label="Input" />
+        <SidebarItem link="/cform" icon="pi pi-image" label="CCTV Form" />
+        <SidebarItem link="/input" icon="pi pi-inbox" label="Records" />
         <SidebarItem link="/button" icon="pi pi-mobile" label="Button" />
-        <!-- Add more menu items similarly -->
+        <SidebarItem link="/landingpage" icon="pi pi-image" label="Landing Page" />
       </div>
     </div>
 
-    <!-- Pages Section -->
     <div class="mt-6">
-      <h2 class="text-xs font-bold text-gray-400 uppercase mb-4">Pages</h2>
+      <h2 class="text-xs font-bold text-gray-400 uppercase mb-4">Key Monitoring</h2>
       <div class="space-y-1">
         <SidebarItem link="/landing" icon="pi pi-globe" label="Landing" />
         
 
-        <!-- Auth collapsible -->
         <button 
           @click="toggleDropdown('auth')" 
           class="w-full flex items-center gap-3 text-gray-700 py-2 px-3 rounded-lg hover:bg-gray-100 transition"
@@ -91,14 +88,8 @@ const toggleDropdown = (name) => {
           leave-to-class="max-h-0 opacity-0"
         >
           <div v-if="openDropdown === 'another'" class="ml-7 space-y-1">
-            <RouterLink to="/profile" class="flex items-center gap-2 text-gray-600 py-1 px-2 rounded hover:bg-gray-100 transition">
-              <i class="pi pi-user-edit"></i>
-              <span>Profile</span>
-            </RouterLink>
-            <RouterLink to="/logout" class="flex items-center gap-2 text-gray-600 py-1 px-2 rounded hover:bg-gray-100 transition">
-              <i class="pi pi-sign-out"></i>
-              <span>Logout</span>
-            </RouterLink>
+            <SidebarItem link="/profile" icon="pi pi-user-edit" label="Profile" />
+            <SidebarItem link="/logout" icon="pi pi-sign-out" label="Logout" />
           </div>
         </Transition>
     
